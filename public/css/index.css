@@ -2,8 +2,8 @@
 
 
 
-#wrap{}
-#header{width:100%; background-color: #52565e;}
+#wrap{position: relative;}
+#header{}
 #slide{}
 #content{}
 #footer{width:100%;height: 79px; background-color: #52565e;}
@@ -15,17 +15,17 @@
 .header{overflow:hidden;}
 
 .header .mlogin{text-align: right; margin-top:11px;}
-.header .mlogin a{font-size: 9px; ;display:inline-block; height: 20px; line-height: 20px; padding:0 10px; color:#fff; font-weight: bold;}
+.header .mlogin a{font-size: 9px; display:inline-block; height: 20px; line-height: 20px; padding:0 10px; color:black; font-weight: bold; }
 .header .mlogin a:last-child{border: 1px solid #fff; border-radius: 30px;}
-.header .mlogin a:last-child:hover{background-color: #fff; color:#52565e;}
+.header .mlogin a:last-child:hover{background-color: #fff; color:#52565e;text-shadow: 0px 0px grey;}
 
-.header .mlogo{float:left;width:20%;}
+.header .mlogo{float:left;width:20%; }
 /*font-family: 'Staatliches', cursive;*/
-.header .mlogo h1{font-family: 'Staatliches';font-weight: bold; font-size: 41px; color:white; display:inline-block; margin: 6px 0 12px; letter-spacing: 3px; }
+.header .mlogo h1{font-family: 'Staatliches';font-weight: bold; font-size: 41px; color:black; display:inline-block; margin: 6px 0 12px; letter-spacing: 3px;text-shadow: 1px 1px grey; }
 
 .header .mnav{overflow: hidden; float:left;width:80%;}
 .header .mnav li{float:left; width:20%; text-align: center; height: 49px; line-height: 49px; margin: 10px 0;}
-.header .mnav li a{display:block; font-size: 14px; font-weight: bold; color: #f5faff;}
+.header .mnav li a{display:block; font-size: 16px; font-weight: bold; color: black; }
 
 
 /*slide*/
@@ -227,6 +227,7 @@
 
 @media (max-width: 1280px) {
     .container{width:100%;}
+    .header .mlogo{text-align: center;}
     table{width:100%;}
 
 }
@@ -237,6 +238,8 @@
 @media (max-width: 768px) {
 }
 @media (max-width: 600px) {
+    #header{position: static; background-color: #52565e;}
+
     .header .mlogo{float:none; width:100%; text-align: center;}
     .header .mnav{float:none;width:100%;}
     .slide ul li img{width:100%; height: 270px;}

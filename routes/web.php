@@ -28,6 +28,10 @@ Route::group(['middleware' => ['auth', 'instagram']], function(){
     Route::get('/instagram/callback', 'InstagramController@handleProviderInstagramCallback');
 });
 
+//Social 로그인
+Route::get('/{site}/redirect', ['as'=>'redirect', 'uses' => 'Auth\LoginController@redirectToProvider']);
+Route::get('/{site}/callback', ['as'=>'callback', 'uses' => 'Auth\LoginController@handleProviderCallback']);
+
 
 Route::get('profile', function () {
     // Only verified users may enter...

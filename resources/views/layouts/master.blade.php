@@ -16,6 +16,9 @@
 </head>
 <body>
 <div id="wrap">
+
+
+
     <div id="header">
         <div class="container">
             <div class="header">
@@ -35,6 +38,7 @@
                                 @if (Route::has('register'))
                                     <a href="{{ route('register') }}">Join</a>
                                 @endif
+                                    <a href="{{route('redirect', ['facebook'])}}">facebook login</a>
                                     <a href="{{ route('login') }}">Login</a>
                             @endauth
                         </div>

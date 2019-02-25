@@ -46,16 +46,27 @@ return [
         'redirect' => env('GOOGLE_CALLBACK_URL'),
     ],
 
-    'github' => [
-        'client_id' => env('GITHUB_CLIENT_ID'),
-        'client_secret' => env('GITHUB_CLIENT_SECRET'),
-        'redirect' => env('GITHUB_CALLBACK_URL'),
-    ],
+
 
     'instagram' => [
         'client_id' => env('INSTAGRAM_KEY'),
         'client_secret' => env('INSTAGRAM_SECRET'),
         'redirect' => env('INSTAGRAM_REDIRECT_URI')
     ],
+
+    'facebook' => [
+        'client_id' => env('FACEBOOK_CLIENT_ID'),
+        'client_secret' => env('FACEBOOK_CLIENT_SECRET'),
+        'redirect' => env('FACEBOOK_REDIRECT')
+    ],
+
+    'github' => [
+        'client_id' => env('GITHUB_CLIENT_ID'),
+        'client_secret' => env('GITHUB_CLIENT_SECRET'),
+        'redirect' => env('GITHUB_REDIRECT'),
+    ],
+
+
+
 
 ];

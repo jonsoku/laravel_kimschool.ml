@@ -60,6 +60,16 @@
                                     <i class="fab fa-google"></i><span>구글로 로그인하기</span>
                                 </div>
 
+
+                                <div>
+                                    <a href="{{route('redirect', ['facebook'])}}">facebook login</a>
+                                </div>
+
+                                <div>
+                                    <a href="{{route('redirect', ['github'])}}">github login</a>
+                                </div>
+
+
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('비밀번호 찾기') }}

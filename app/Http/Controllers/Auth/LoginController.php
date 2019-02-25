@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\User;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Log;
 use Laravel\Socialite\Facades\Socialite;
 
 class LoginController extends Controller
@@ -43,9 +45,9 @@ class LoginController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function redirectToProvider()
+    public function redirectToProvider($site)
     {
-        return Socialite::driver('google')->redirect();
+        return Socialite::driver($site)->redirect();
     }
 
     /**
@@ -53,9 +55,35 @@ class LoginController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function handleProviderCallback()
+    public function handleProviderCallback($site)
     {
-        $user = Socialite::driver('google')->user();
+        Log::info("===소셜 로그인 (" . $site . ") ===");
+
+        try{
+            $user = Socialite::driver($site)->user();
+            //dd($user);
+        }catch(\Exception $e){
+            return redirect('/');
+        }
+
+        $existingUser = User::where('email', $user->email)->first();
+        if($existingUser){
+            Log::info("이미 가입한 소셜 로그인 사용자");
+            auth()->login($existingUser, true);
+        }else{
+            if(isset($user->email)){
+                $newUser = new User();
+                $newUser->name = $user->name;
+                $newUser->email = $user->email;
+                $newUser->save();
+
+                Log::info("신규 가입한 소셜 로그인 사용자");
+                Log::info($newUser);
+
+                auth()->login($newUser, true);
+            }
+        }
+        return redirect()->to('/');
     }
 
 
