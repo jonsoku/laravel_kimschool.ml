@@ -45,11 +45,11 @@
                     @endif
                 </div>
                 <div class="mlogo">
-                    <h1><a style="color:#fff;" href="http://54.249.16.16">KIMSCHOOL</a></h1>
+                    <h1><a style="color:#fff;" href="/">KIMSCHOOL</a></h1>
                 </div>
                 <nav class="mnav">
                     <ul>
-                        <li><a href="/">Home</a></li>
+                        <li><a href="/">MENU</a></li>
                         <li><a href="{{route('introduces.index')}}">About us</a></li>
                         <li><a href="{{route('notices.index')}}">Notice</a></li>
                         <li><a href="{{route('applies.index')}}">Course</a></li>
