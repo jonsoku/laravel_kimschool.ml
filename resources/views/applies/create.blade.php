@@ -78,7 +78,7 @@
             </div>
 
 
-            <div class="subject_checkbox mt60">
+            <div class="subject_checkbox ">
 
                 <h2><i class="fas fa-book-open"></i>   수강신청과목</h2>
 

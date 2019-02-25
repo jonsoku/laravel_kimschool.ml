@@ -10,16 +10,18 @@
                 <li><a href="#"><img src="/img/slide/slide5.jpeg" alt=""></a></li>
                 <li><a href="#"><img src="/img/slide/slide6.jpeg" alt=""></a></li>
             </ul>
-            <div class="dots">
 
-            </div>
-            <div>
+            <div class="slide-arrow">
                 <div class="arrow left-arrow">
                     <i class="fas fa-angle-left"></i>
                 </div>
                 <div class="arrow right-arrow">
                     <i class="fas fa-angle-right"></i>
                 </div>
+
+            </div>
+            <div class="dots">
+
             </div>
         </div>
     </div>

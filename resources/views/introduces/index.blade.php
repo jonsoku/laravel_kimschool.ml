@@ -6,7 +6,7 @@
                 <li><span>사업내용</span></li>
                 <li><span>교실소개</span></li>
                 <li><span>커리큘럼</span></li>
-                <li><span>취업로드맵</span</li>
+                <li><span>취업로드맵</span></li>
                 <li><span>취업실적</span></li>
                 <li><span>파트너사</span></li>
             </ul>
@@ -54,11 +54,11 @@
                 for(let j = 0 ; j<length ; j++){
                     if(introduceLi[j].classList.contains('showing')){
                         introduceLi[j].classList.remove('showing');
-                        introduceBlockSpan[j].classList.remove('ibsshowing');
+                        introduceBlock[j].classList.remove('ibsshowing');
                     }
                 }
                 introduceLi[index].classList.add('showing');
-                introduceBlockSpan[index].classList.add('ibsshowing');
+                introduceBlock[index].classList.add('ibsshowing');
             }
 
         };

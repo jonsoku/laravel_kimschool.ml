@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>JONGSOKU</title>
+    <title>KIMSCHOOL</title>
 
     <!--style-->
     <link rel="stylesheet" href="{{ asset('css/reset.css') }}" />
@@ -21,11 +21,11 @@
             <div class="header">
                 <div class="mlogin">
                     <div>
-                        <a href="{{ route('insta.index') }}">인스타그램</a>
+                        <a href="{{ route('insta.index') }}">Instagram</a>
                         @if (Route::has('login'))
 
                             @auth
-                                <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('로그아웃') }}</a>
+                                <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('Logout') }}</a>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                     @csrf
                                 </form>
@@ -33,23 +33,23 @@
 
                             @else
                                 @if (Route::has('register'))
-                                    <a href="{{ route('register') }}">회원가입</a>
+                                    <a href="{{ route('register') }}">Join</a>
                                 @endif
-                                    <a href="{{ route('login') }}">로그인</a>
+                                    <a href="{{ route('login') }}">Login</a>
                             @endauth
                         </div>
                     @endif
                 </div>
                 <div class="mlogo">
-                    <h1><a style="color:#fff;" href="http://54.249.16.16">JONSOKU</a></h1>
+                    <h1><a style="color:#fff;" href="http://54.249.16.16">KIMSCHOOL</a></h1>
                 </div>
                 <nav class="mnav">
                     <ul>
-                        <li><a href="/">홈으로</a></li>
-                        <li><a href="{{route('introduces.index')}}">학원소개</a></li>
-                        <li><a href="{{route('notices.index')}}">공지사항</a></li>
-                        <li><a href="{{route('applies.index')}}">수강신청</a></li>
-                        <li><a href="{{route('frees.index')}}">질문답변게시판</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="{{route('introduces.index')}}">About us</a></li>
+                        <li><a href="{{route('notices.index')}}">Notice</a></li>
+                        <li><a href="{{route('applies.index')}}">Course</a></li>
+                        <li><a href="{{route('frees.index')}}">Q&A</a></li>
                     </ul>
                 </nav>
             </div>
