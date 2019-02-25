@@ -20,8 +20,10 @@
         <div class="container">
             <div class="header">
                 <div class="mlogin">
-                    @if (Route::has('login'))
-                        <div>
+                    <div>
+                        <a href="{{ route('insta.index') }}">인스타그램</a>
+                        @if (Route::has('login'))
+
                             @auth
                                 <a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit();">{{ __('로그아웃') }}</a>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

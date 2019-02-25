@@ -48,6 +48,10 @@ class User extends Authenticatable
         return $this->hasMany(FreeComment::class);
     }
 
+    public function instagram(){
+        return $this->hasOne(Instagram::class, 'user_id', 'id');
+    }
+
     //어드민
     public function isAdmin(){
         return $this->id === 1;

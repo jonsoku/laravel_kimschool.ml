@@ -11,5 +11,15 @@
       <user-name>the2792</user-name>
       <introspection-schemas>*:@</introspection-schemas>
     </data-source>
+    <data-source name="kimschool1@laravel.cim78dtgz3dv.ap-northeast-1.rds.amazonaws.com" uuid="fb3e406b-4117-483e-9f2a-d3ef44d53494">
+      <database-info product="MySQL" version="5.6.40-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.46 ( Revision: 9cc87a48e75c2d2e87c1a293b2862ce651cb256e )" dbms="MYSQL" exact-version="5.6.40" exact-driver-version="5.1">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>the2792</user-name>
+      <introspection-schemas>*:@</introspection-schemas>
+    </data-source>
   </component>
 </project>

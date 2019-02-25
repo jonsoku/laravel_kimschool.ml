@@ -16,6 +16,19 @@ Route::get('/', function () {
 });
 
 Auth::routes(['verify' => true]);
+
+Route::group(['middleware' => ['auth', 'instagram']], function(){
+
+    Route::get('/insta', 'AppController@index')->name('insta.index');
+
+    Route::get('/insta/search', 'AppController@search')->name('insta.search');
+
+    Route::get('/instagram', 'InstagramController@redirectToInstagramProvider');
+
+    Route::get('/instagram/callback', 'InstagramController@handleProviderInstagramCallback');
+});
+
+
 Route::get('profile', function () {
     // Only verified users may enter...
 })->middleware('verified');

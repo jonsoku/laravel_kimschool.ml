@@ -46,6 +46,9 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+        if($exception instanceof GuzzleException){
+            return response('An error occurred when making request to InstagramAPI');
+        }
         return parent::render($request, $exception);
     }
 }
