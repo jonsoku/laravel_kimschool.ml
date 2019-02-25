@@ -15,7 +15,7 @@
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-mail') }}</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" placeholder="admin@gmail.com" required autofocus >
+                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}"  required autofocus >
 
                                 @if ($errors->has('email'))
                                     <span class="invalid-feedback" role="alert">
@@ -29,7 +29,7 @@
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('비밀번호') }}</label>
 
                             <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required value="admin">
+                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
 
                                 @if ($errors->has('password'))
                                     <span class="invalid-feedback" role="alert">
@@ -62,13 +62,11 @@
 
 
                                 <div>
-                                    <a href="{{route('redirect', ['facebook'])}}">facebook login</a>
+                                    <a href="{{route('redirect', ['facebook'])}}"> <i class="fab fa-facebook"></i><span>facebook 로그인하기</span></a>
                                 </div>
-
                                 <div>
-                                    <a href="{{route('redirect', ['github'])}}">github login</a>
+                                    <a href="{{route('redirect', ['github'])}}"> <i class="fab fa-github"></i><span>github 로그인하기</span></a>
                                 </div>
-
 
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
