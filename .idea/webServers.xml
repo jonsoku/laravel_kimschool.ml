@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="518aa858-0cda-41b3-a609-897f5ba1799d" name="laravel" url="http://jongseok92.ml">
+        <fileTransfer host="jongseok92.ml" port="22" privateKey="$PROJECT_DIR$/../../key/testserver.pem" rootFolder="/var/www" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
